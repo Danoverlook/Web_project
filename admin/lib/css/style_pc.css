@@ -1,0 +1,228 @@
+/*************** GENERALITES  ...........*/
+
+/****************** Layout ***************/
+
+
+        /****************** Header **************/
+        header {
+            margin:0 auto;
+            width:90%; 
+            max-width:900px;
+            min-width: 760px;
+            height:145px;
+            background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#7d7e7d), color-stop(100%,#0e0e0e)); /* Chrome,Safari4+ */
+            color:white;
+            border-top-left-radius: 7px;
+            border-top-right-radius: 7px;
+        }
+        
+        #logo{
+            float:left;
+            padding-left:1%;
+            padding-top:1%;
+            border-radius:8px;
+        }
+        
+        #recherche_rapide{
+            display:inline-block;
+            margin-left:1%;
+            margin-top: 3%;
+            margin-bottom:1%;
+            border-top-left-radius:5px;
+            border-bottom-left-radius:5px;
+        }
+        
+        #button_rech_rap{
+            display:block;
+            border-top-right-radius:3px;
+            border-bottom-right-radius:3px;
+            margin-top:-3.169%;
+            margin-left:36.5%;
+            width:2.18%;
+            height:2%;
+        }
+        
+        #recherche_avancee{
+            margin-left:1%;
+            color:white;
+            text-decoration:none;
+        }
+        
+        #recherche_avancee:hover{
+            text-decoration:underline;
+        }
+        
+        #recherche_avancee:focus{
+            color:greenyellow
+        }
+        
+        #form_rech_avancee{
+            width:57%;
+            margin-left:42%;
+            margin-top:-78px;
+        }
+        #choix_genre1,#choix_genre2{
+            display:inline-block;
+            border-radius:5px;
+        }
+        
+        #choix_acteur,#choix_realisateur{
+            margin-top:1%;
+            display:inline-block;
+            border-radius:5px;
+        }
+        
+        #choix_duree1,#choix_duree2{
+            width:8%;
+            margin-top:1%;
+            display:inline-block;
+            border-radius:5px;
+        }
+        
+        #choix_annee1,#choix_annee2{
+            width:10%;
+            margin-top:1%;
+            display:inline-block;
+            border-radius:5px;
+        }
+        
+        #choix_note{
+            width:7%;
+            display:inline-block;
+            border-radius:5px;
+        }
+        
+        #button_rech_av{
+            display:block;
+            float:right;
+            margin-right:28.5%;
+            margin-top:1%;
+            width:6%;
+            height:6%;
+            display:inline-block;
+            border-radius:5px;
+        }
+
+        /****************** Page **************/
+        #page {
+             margin:0 auto;
+             width:90%; 
+             max-width:900px;
+             min-width:760px;
+             height:1000px;
+             margin-top:0.5%;
+             background-color: lightslategrey;
+             border-radius:7px;
+        }
+        
+        /****************** colGauche **************/
+        #button_ajout{
+            margin-left:2%;
+            margin-top:2%;
+            width:10%;
+            height:4%;
+            padding:0;
+            background-color:greenyellow;
+            border-radius:5px;
+        }
+        
+        #colGauche{
+            float:left;
+            margin-top:3%;
+            width:15%;
+        }
+        
+                
+        #select_genre{
+            margin-left:4%;
+            display:inline-block;
+            text-decoration:underline;
+        }
+        
+        #menu{
+            margin-top:4%;
+            margin-left:-20%;
+        }
+        
+        #menu li {
+            list-style-type:none;
+            font-weight:bold;
+        }
+        
+        #menu a {
+            text-decoration:none;
+        }
+        
+        a{
+            color:black;
+        }
+        
+        a:hover{
+            color:white;
+        }
+        
+        a:focus{
+            color:greenyellow
+        }
+        
+        /****************** supprimer la sélection **************/
+        
+        #sup_selection{
+            margin-left:3%;
+        }
+        
+        /****************** Contenu **************/
+        
+        #contenu{
+            float:left;
+            width:52%;
+            height:90%;
+            margin-top:3%;
+            padding-left:3%;
+            padding-top:0%;
+        }
+        
+        /****************** Aside **************/
+        
+        #activer_modif{
+            display:block;
+            width:18%;
+            margin-left:79%;
+            margin-top:-6%;
+            text-align:right;
+        }
+        
+        aside{
+            float:right;
+            margin-top:5%;
+            margin-right:2%;
+           
+        }
+        
+        caption{
+            font-weight:bold;
+            background-color:rgb(255,212,5);
+            border-left:solid 2px;
+            border-right:solid 2px;
+            border-top:solid 2px;
+            border-top-left-radius:5px;
+            border-top-right-radius:5px;
+        }
+        
+        table{
+            background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#7abcff), color-stop(44%,#60abf8), color-stop(100%,#4096ee)); /* Chrome,Safari4+ */
+            border-bottom:solid 2px;
+            border-left:solid 2px;
+            border-right:solid 2px;
+            border-bottom-left-radius:5px;
+            border-bottom-right-radius:5px;
+        }
+        
+        /****************** Footer **************/
+        
+        footer{
+            clear:both;
+            margin:0 auto;
+            text-align:center;
+        }
+        
