@@ -99,7 +99,6 @@
             margin-top:1%;
             width:6%;
             height:6%;
-            display:inline-block;
             border-radius:5px;
         }
 
@@ -111,14 +110,14 @@
              min-width:760px;
              height:1000px;
              margin-top:0.5%;
-             background-color: lightslategrey;
+             background-color: rgb(188,197,205);
              border-radius:7px;
         }
         
         /****************** colGauche **************/
         #button_ajout{
-            margin-left:2%;
-            margin-top:2%;
+            margin-left:1%;
+            margin-top:1%;
             width:10%;
             height:4%;
             padding:0;
@@ -129,10 +128,10 @@
         #colGauche{
             float:left;
             margin-top:3%;
+            margin-left:2%;
             width:15%;
         }
         
-                
         #select_genre{
             margin-left:4%;
             display:inline-block;
@@ -144,9 +143,14 @@
             margin-left:-20%;
         }
         
-        #menu li {
-            list-style-type:none;
+        .button_genre{
+            background-color:rgb(188,197,205);;
+            border:none;
             font-weight:bold;
+        }
+        
+        .button_genre:hover{
+            color:white;
         }
         
         #menu a {
@@ -168,7 +172,7 @@
         /****************** supprimer la sélection **************/
         
         #sup_selection{
-            margin-left:3%;
+            margin-left:5%;
         }
         
         /****************** Contenu **************/
@@ -177,29 +181,81 @@
             float:left;
             width:52%;
             height:90%;
-            margin-top:3%;
-            padding-left:3%;
-            padding-top:0%;
+            margin-top:1%;
+            padding-left:5%;
+        }
+        
+        /****************** Page accueil ********/
+        
+        #button_fiche_film{
+            float:left;
+            width:20%;
+            padding:0%;
+            border:none;
+        }
+        
+        #button_fiche_film img{
+            width:100%;
+        }
+        
+        #form_liste{
+            margin-left:25%;
+        }
+        
+        .table_contenu{
+            color:black;
+            font-size:0.9em;
+        }
+        
+        #titre_film{
+            color:firebrick;
+            font-weight:bold;
+            padding-left:0;
+        }
+        
+        #titre_film:hover{
+            color:white;
+        }
+        
+        .td_bold{
+            color:darkslategrey;
+            font-weight:bold;
+        }
+        
+        /****************** Page ajout ********/
+       
+        #form_ajout{
+            border:solid 1px;
+            border-radius:6px;
+            padding-left:4%;
+        }
+        
+        #label_textarea{
+            vertical-align:top;
+        }
+        
+        textarea{
+            resize: none;
+        }
+        
+        #button_ajouter{
+            background-color:greenyellow;
         }
         
         /****************** Aside **************/
+   
+        aside{
+            float:right;
+            margin-right:2%;
+        }
         
-        #activer_modif{
+        #activ_sup{
             display:block;
-            width:18%;
-            margin-left:79%;
-            margin-top:-6%;
             text-align:right;
         }
         
-        aside{
-            float:right;
-            margin-top:5%;
-            margin-right:2%;
-           
-        }
-        
         caption{
+            margin-top:25%;
             font-weight:bold;
             background-color:rgb(255,212,5);
             border-left:solid 2px;
@@ -209,13 +265,23 @@
             border-top-right-radius:5px;
         }
         
-        table{
+        #table_top{
             background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#7abcff), color-stop(44%,#60abf8), color-stop(100%,#4096ee)); /* Chrome,Safari4+ */
             border-bottom:solid 2px;
             border-left:solid 2px;
             border-right:solid 2px;
             border-bottom-left-radius:5px;
             border-bottom-right-radius:5px;
+        }
+        
+        .button_lien{
+            background-color: rgb(188,197,205);
+            border:none;
+            text-decoration:underline;
+        }
+        
+        .button_lien:hover{
+           color:white;
         }
         
         /****************** Footer **************/
