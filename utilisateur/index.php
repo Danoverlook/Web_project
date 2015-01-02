@@ -205,6 +205,12 @@ session_start();
                         include ($_SESSION['page']);
                     }
                 }
+                if (isset($_POST['bouton_modifier_film'])) {
+                    $_SESSION['page'] = './pages/page_modification.php';
+                    if (file_exists($_SESSION['page'])) {
+                        include ($_SESSION['page']);
+                    }
+                }
                 ?>
             </section>
 

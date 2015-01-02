@@ -144,7 +144,7 @@
         }
         
         .button_genre{
-            background-color:rgb(188,197,205);;
+            background-color:rgb(188,197,205);
             border:none;
             font-weight:bold;
         }
@@ -223,11 +223,39 @@
         }
         
         /****************** Page ajout ********/
-       
+        
         #form_ajout{
             border:solid 1px;
             border-radius:6px;
-            padding-left:4%;
+            padding-left:0.5%;
+            padding-bottom:1%;
+        }
+        
+        #titre_film_ajout{
+            color:firebrick;
+            font-weight:bold;
+        }
+        
+        .td_ajout{
+            padding-bottom:1%;
+            color:darkslategrey;
+            font-weight:bold;
+        }
+        
+        #text_annee{
+            width:10%;
+        }
+        
+        #text_duree{
+            width:7%;
+        }
+        
+        #text_note{
+            width:5%;
+        }
+        
+        #list_definition{
+            width:18%;
         }
         
         #label_textarea{
@@ -241,6 +269,86 @@
         #button_ajouter{
             background-color:greenyellow;
         }
+        
+        /****************** Page fiche **************/
+        
+        #table_fiche{
+            margin-top:-24%;
+            border-left:2px solid;
+            border-right:2px solid;
+            border-bottom:2px solid;
+            border-bottom-left-radius:5px;  
+            border-bottom-right-radius:5px;
+            font-size:1em;
+            background-color:rgb(112,146,190);
+        }
+        
+        #caption_fiche{
+            background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#7d7e7d), color-stop(100%,#0e0e0e)); /* Chrome,Safari4+ */
+            font-size:2em;
+            color:peru;
+            border-color:black;
+            text-align:left;
+            padding-left:5%;
+        }
+        
+        #caption_span_annee{
+            font-size:0.7em;
+            color:royalblue;
+        }
+        
+        #td_image{
+            border:solid;
+            width:200px;
+        }
+        
+        #td_image img{
+            width:100%
+        }
+        
+        #td_droite_img{
+            padding:3%;
+            vertical-align:top;
+            font-size:1em;
+        }
+        
+        .span_bold{
+            font-weight:bold;
+            color:darkred;
+        }
+        
+        #span_note{
+            font-weight:bold;
+            color:rgb(255,212,5);
+        }
+        
+        #td_resume{
+            padding-left:1%;
+        }
+        
+        #td_bouton_modif{
+            border-right:solid 1px;
+            text-align:right;
+        }
+        
+        #button_modifier{
+            border:none;
+            font-weight:bold;
+            background-color:rgb(112,146,190);
+        }
+        
+        #button_modifier:hover{
+            color:white;
+        }
+        
+        #fiche_sup_film{
+            text-decoration:none;
+            font-weight:bold;
+        }
+        
+        /****************** Page modification **************/
+        
+        
         
         /****************** Aside **************/
    
@@ -266,7 +374,7 @@
         }
         
         #table_top{
-            background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#7abcff), color-stop(44%,#60abf8), color-stop(100%,#4096ee)); /* Chrome,Safari4+ */
+            background-color:rgb(112,146,190);
             border-bottom:solid 2px;
             border-left:solid 2px;
             border-right:solid 2px;
