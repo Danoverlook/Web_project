@@ -10,6 +10,7 @@
         <tr><td><span class="span_bold">&nbspLangue(s) disponible(s)</td><td>anglais, français</td></tr>
         <tr><td><span class="span_bold">&nbspSous-titre(s) disponible(s)</td><td>anglais, français</td></tr>
         <tr><td><span class="span_bold">&nbspDéfinition</td><td>1080p</td></tr>
+        <tr><td><span class="span_bold">&nbspURL IMDB</td><td>www.imdb.com</td></tr>
         <tr><td><br/></td></tr>
         <tr><td id="td_bouton_modif"><button type="submit" id="button_modifier" name="bouton_modifier_film">modifier</button></td><td><a href="" id="fiche_sup_film">&nbspsupprimer</a></td></tr>
     </table>

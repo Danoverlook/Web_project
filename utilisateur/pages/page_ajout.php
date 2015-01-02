@@ -27,6 +27,7 @@
     <tr><td class="td_ajout">Sous-titre dispo 2&nbsp&nbsp&nbsp&nbsp</td><td><input type="text"></td></tr>
     <tr><td class="td_ajout">Sous-titre dispo 3&nbsp&nbsp&nbsp&nbsp</td><td><input type="text"></td></tr>
     <tr><td class="td_ajout">Définition&nbsp&nbsp&nbsp&nbsp</td><td><input list="definition" type="text" id="list_definition"><datalist id="definition"><option value="480p"><option value="720p"><option value="1080p"></datalist></td></tr>
+    <tr><td class="td_ajout">url IMDB&nbsp&nbsp&nbsp&nbsp</td><td><input type="text"></td></tr>
     <tr><td class="td_ajout"><br/></td></tr>
     <tr><td class="td_ajout"></td><td><button type="submit" id="button_ajouter" name="b_ajouter">Ajouter</button></td></tr>
 </table>
