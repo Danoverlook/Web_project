@@ -23,7 +23,7 @@ class Film_realisateurManager extends Film_realisateur {
             $_film_realisateurArray[] = new Film_realisateur($data);
         }
 
-        return $_filmArray;
+        return $_film_realisateurArray;
     }
 
     public function addFilm_realisateur(array $data) {

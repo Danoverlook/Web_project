@@ -4,6 +4,7 @@
 
 
         /****************** Header **************/
+        
         header {
             margin:0 auto;
             width:90%; 
@@ -220,6 +221,7 @@
         .td_bold{
             color:darkslategrey;
             font-weight:bold;
+            vertical-align: top;
         }
         
         /****************** Page ajout ********/

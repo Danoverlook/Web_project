@@ -12,7 +12,7 @@ class GenreManager extends Genre {
 
     public function getListeGenre() {
         try {
-            $query = "select * from genre";
+            $query = "select * from genre order by nomgenre";
             $resultset = $this->_db->prepare($query);
             $resultset->execute();
         } catch (PDOException $e) {

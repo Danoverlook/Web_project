@@ -9,7 +9,8 @@
     <tr><td class="td_ajout">Genre 1&nbsp&nbsp&nbsp&nbsp</td><td><input type="text"></td></tr>
     <tr><td class="td_ajout">Genre 2&nbsp&nbsp&nbsp&nbsp</td><td><input type="text"></td></tr>
     <tr><td class="td_ajout">Genre 3&nbsp&nbsp&nbsp&nbsp</td><td><input type="text"></td></tr>
-    <tr><td class="td_ajout">Réalisateur&nbsp&nbsp&nbsp&nbsp</td><td><input type="text"></td></tr>
+    <tr><td class="td_ajout">Réalisateur 1&nbsp&nbsp&nbsp&nbsp</td><td><input type="text"></td></tr>
+    <tr><td class="td_ajout">Réalisateur 2&nbsp&nbsp&nbsp&nbsp</td><td><input type="text"></td></tr>
     <tr><td class="td_ajout">Acteur 1&nbsp&nbsp&nbsp&nbsp</td><td><input type="text"></td></tr>
     <tr><td class="td_ajout">Acteur 2&nbsp&nbsp&nbsp&nbsp</td><td><input type="text"></td></tr>
     <tr><td class="td_ajout">Acteur 3&nbsp&nbsp&nbsp&nbsp</td><td><input type="text"></td></tr>

@@ -12,7 +12,7 @@ class PersonneManager extends Personne {
 
     public function getListePersonne() {
         try {
-            $query = "select * from personne";
+            $query = "select * from personne order by nompersonne,prenompersonne";
             $resultset = $this->_db->prepare($query);
             $resultset->execute();
         } catch (PDOException $e) {
