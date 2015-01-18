@@ -17,20 +17,20 @@ session_start();
         <header>
             <img src="../admin/images/logo.png" alt="JumBox" id="logo" />
 
-            <form method="POST">
+            <form method="GET" action="index.php?page=page_accueil">
                 <input type="text" name="rech_titre" value="recherche par titre" id="recherche_rapide" onfocus="if (this.value == 'recherche par titre')
                             this.value = '';">
-                <button type="submit" id="button_rech_rap" name="rech_rap">|></button>
+                <button type="submit" id="button_rech_rap" name="rech_rap">rechercher</button>
             </form>
 
             <?php
-            if (isset($_POST['rech_rap'])) {
+            if (isset($_GET['rech_rap'])) {
                 $_SESSION['page'] = "page_accueil";
             }
             ?>
             <br/>
 
-            <a href="" id="recherche_avancee">> recherche avancée</a>
+            <!--<a href="" id="recherche_avancee">> recherche avancée</a>
 
             <form method="POST" id="form_rech_avancee">
                 <label>genre 1&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</label>
@@ -118,26 +118,18 @@ session_start();
             if (isset($_POST['rech_av'])) {
                 $_SESSION['page'] = "page_accueil";
             }
-            ?>
+            ?>-->
         </header>
 
         <!------PAGE------------------------------------------------------------------------------------------>
         <section id="page">
 
-            <!--BOUTON AJOUT FILM----------------------------------------------------------------------------->
-            <form method="POST">
-                <button type="submit" id="button_ajout" name="bouton_ajout_clic">Ajouter un film</button>
-            </form>
-
-            <?php
-            if (isset($_POST['bouton_ajout_clic'])) {
-                $_SESSION['page'] = "page_ajout";
-            }
-            ?>
-
             <!--COLONNE DE GAUCHE------------------------------------------------------------------------------------------>
 
             <section id="colGauche">
+                <!--LIEN AJOUT FILM----------------------------------------------------------------------------->
+            <a href="index.php?page=page_ajout" id="button_ajout">Ajouter un film</a>
+            <br/><br/>
                 <nav>
                     <span id="select_genre">sélection d'un genre</span>
                     <?php
@@ -151,7 +143,7 @@ session_start();
             <!--COLONNE DE DROITE------------------------------------------------------------------------------------------>
 
             <aside>
-                <a href="" id="activ_sup">activer la suppression</a>
+                <!--<a href="" id="activ_sup">activer la suppression</a>-->
                 <table id="table_top">
                     <caption>Top 10</caption>
                     <tr><td></td><td></td></tr>
@@ -175,9 +167,9 @@ session_start();
                     </tr>
                 </table>
                 &nbsp&nbsp&nbsp;
-                <form method="POST">
+                <!--<form method="POST">
                     <button type="submit" class="button_lien" name="bouton_stat_clic"><a href="" id="voir_stat"></a>> accéder aux statistiques</button>
-                </form>
+                </form>-->
 
                 <?php
                 if (isset($_POST['bouton_stat_clic'])) {
@@ -187,29 +179,30 @@ session_start();
             </aside>
 
             <!--CONTENU------------------------------------------------------------------------------------------>
-            <a href="" id="sup_selection">supprimer la sélection</a>
+            <!--<a href="" id="sup_selection">supprimer la sélection</a>-->
 
             <section id="contenu">
                 <?php
                 //quand on arrive sur le site 
                 if (!isset($_SESSION['page'])) {
                     $_SESSION['page'] = "page_accueil";
-                }  //si on a cliqué sur un lien du menu
-                $_SESSION['page'] = './pages/' . $_SESSION['page'] . '.php';
-                if (file_exists($_SESSION['page'])) {
-                    include ($_SESSION['page']);
                 }
-                if (isset($_POST['bouton_film_clic'])) {
+
+                if (isset($_GET['page'])) {
+                    $_SESSION['page'] = $_GET['page'];
+                }
+
+                /*if (isset($_POST['bouton_film_clic'])) {
                     $_SESSION['page'] = './pages/page_fiche.php';
-                    if (file_exists($_SESSION['page'])) {
-                        include ($_SESSION['page']);
-                    }
+                    echo '3';
                 }
                 if (isset($_POST['bouton_modifier_film'])) {
                     $_SESSION['page'] = './pages/page_modification.php';
-                    if (file_exists($_SESSION['page'])) {
-                        include ($_SESSION['page']);
-                    }
+                    echo '4';
+                }*/
+
+                if (file_exists('./pages/' . $_SESSION['page'] . '.php')) {
+                    include ('./pages/' . $_SESSION['page'] . '.php');
                 }
                 ?>
             </section>

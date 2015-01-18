@@ -4,7 +4,6 @@
 
 
         /****************** Header **************/
-        
         header {
             margin:0 auto;
             width:90%; 
@@ -34,13 +33,8 @@
         }
         
         #button_rech_rap{
-            display:block;
             border-top-right-radius:3px;
             border-bottom-right-radius:3px;
-            margin-top:-3.169%;
-            margin-left:36.5%;
-            width:2.18%;
-            height:2%;
         }
         
         #recherche_avancee{
@@ -109,7 +103,7 @@
              width:90%; 
              max-width:900px;
              min-width:760px;
-             height:1000px;
+             height:1100px;
              margin-top:0.5%;
              background-color: rgb(188,197,205);
              border-radius:7px;
@@ -117,13 +111,12 @@
         
         /****************** colGauche **************/
         #button_ajout{
-            margin-left:1%;
-            margin-top:1%;
-            width:10%;
-            height:4%;
-            padding:0;
+            border:solid 1px;
             background-color:greenyellow;
-            border-radius:5px;
+        }
+        
+        #button_ajout:hover{
+            color:black;
         }
         
         #colGauche{
@@ -139,11 +132,6 @@
             text-decoration:underline;
         }
         
-        #menu{
-            margin-top:4%;
-            margin-left:-20%;
-        }
-        
         .button_genre{
             background-color:rgb(188,197,205);
             border:none;
@@ -154,7 +142,7 @@
             color:white;
         }
         
-        #menu a {
+        a{
             text-decoration:none;
         }
         
@@ -181,31 +169,34 @@
         #contenu{
             float:left;
             width:52%;
-            height:90%;
             margin-top:1%;
             padding-left:5%;
         }
         
         /****************** Page accueil ********/
-        
-        #button_fiche_film{
+
+        .link_fiche{
+            clear:both;
+            display:inline-block;
             float:left;
             width:20%;
-            padding:0%;
-            border:none;
         }
         
-        #button_fiche_film img{
-            width:100%;
-        }
-        
-        #form_liste{
-            margin-left:25%;
+        .img_liste{
+           width:100%;
         }
         
         .table_contenu{
             color:black;
             font-size:0.9em;
+        }
+        
+        .element_liste{
+            margin-bottom:30px;
+        }
+        
+        #clear{
+            clear:both;
         }
         
         #titre_film{
@@ -268,8 +259,16 @@
             resize: none;
         }
         
+        #text_size{
+            width:35%;
+        }
+        
         #button_ajouter{
             background-color:greenyellow;
+        }
+        
+        .oblige{
+            color:red;
         }
         
         /****************** Page fiche **************/

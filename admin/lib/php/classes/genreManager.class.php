@@ -1,18 +1,18 @@
 <?php
 
-class Film_langueManager extends Film_langue {
+class GenreManager extends Genre {
 
     private $_db;
-    private $_film_langueArray = array();
+    private $_genreArray = array();
 
     //$db est un objet créé par l'index
     public function __construct($db) {
         $this->_db = $db;
     }
 
-    public function getListeFilm_langue() {
+    public function getListeGenre() {
         try {
-            $query = "select * from film_langue";
+            $query = "select * from genre order by nomgenre";
             $resultset = $this->_db->prepare($query);
             $resultset->execute();
         } catch (PDOException $e) {
@@ -20,20 +20,18 @@ class Film_langueManager extends Film_langue {
         }
 
         while ($data = $resultset->fetch()) {
-            $_film_langueArray[] = new Film_langue($data);
+            $_genreArray[] = new Genre($data);
         }
 
-        return $_film_langueArray;
+        return $_genreArray;
     }
 
-    public function addFilm_langue(array $data) {
+    public function addGenre(array $data) {
         //var_dump($data);
-        $query = "select add_film_langue(:idfilm,:idlangue) as retour";
+        $query = "select add_genre(:nomgenre) as retour";
         try {
-            $id=null;
             $statement = $this->_db->prepare($query);
-            $statement->bindValue(1, $data['idfilm'], PDO::PARAM_INT);
-            $statement->bindValue(2, $data['idlangue'], PDO::PARAM_INT);
+            $statement->bindValue(1, $data['nomgenre'], PDO::PARAM_STR);
             $statement->execute();
             
             $retour = $statement->fetchColumn(0);

@@ -30,7 +30,6 @@ class Film_paysManager extends Film_pays {
         //var_dump($data);
         $query = "select add_film_pays(:idfilm,:idpays) as retour";
         try {
-            $id=null;
             $statement = $this->_db->prepare($query);
             $statement->bindValue(1, $data['idfilm'], PDO::PARAM_INT);
             $statement->bindValue(2, $data['idpays'], PDO::PARAM_INT);

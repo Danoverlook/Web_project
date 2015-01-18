@@ -1,18 +1,18 @@
 <?php
 
-class Film_realisateurManager extends Film_realisateur {
+class Film_soustitreManager extends Film_soustitre {
 
     private $_db;
-    private $_film_realisateurArray = array();
+    private $_film_soustitreArray = array();
 
     //$db est un objet créé par l'index
     public function __construct($db) {
         $this->_db = $db;
     }
 
-    public function getListeFilm_realisateur() {
+    public function getListeFilm_soustitre() {
         try {
-            $query = "select * from film_realisateur";
+            $query = "select * from film_soustitre";
             $resultset = $this->_db->prepare($query);
             $resultset->execute();
         } catch (PDOException $e) {
@@ -20,20 +20,19 @@ class Film_realisateurManager extends Film_realisateur {
         }
 
         while ($data = $resultset->fetch()) {
-            $_film_realisateurArray[] = new Film_realisateur($data);
+            $_film_soustitreArray[] = new Film-soustitre($data);
         }
 
-        return $_film_realisateurArray;
+        return $_film_soustitreArray;
     }
 
-    public function addFilm_realisateur(array $data) {
+    public function addFilm_soustitre(array $data) {
         //var_dump($data);
-        $query = "select add_film_realisateur(:idfilm,:idpersonne) as retour";
+        $query = "select add_film_soustitre(:idfilm,:idlangue) as retour";
         try {
-            $id=null;
             $statement = $this->_db->prepare($query);
             $statement->bindValue(1, $data['idfilm'], PDO::PARAM_INT);
-            $statement->bindValue(2, $data['idpersonne'], PDO::PARAM_INT);
+            $statement->bindValue(2, $data['idlangue'], PDO::PARAM_INT);
             $statement->execute();
             
             $retour = $statement->fetchColumn(0);
