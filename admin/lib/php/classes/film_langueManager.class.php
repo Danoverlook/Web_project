@@ -26,6 +26,25 @@ class Film_langueManager extends Film_langue {
         return $_film_langueArray;
     }
 
+    public function getFilm_langues($choix) {
+        try {
+            $query = "select * from film_langue where idfilm =:idfilm";
+            $resultset = $this->_db->prepare($query);
+            $resultset->bindValue(1, $choix, PDO::PARAM_INT);
+            $resultset->execute();
+        } catch (PDOException $e) {
+            print "Echec de la requ&ecirc;te " . $e->getMessage();
+        }
+
+        while ($data = $resultset->fetch()) {
+            $_film_langueArray[] = new Film_langue($data);
+        }
+        if (isset($_film_langueArray))
+            return $_film_langueArray;
+        else
+            return 0;
+    }
+
     public function addFilm_langue(array $data) {
         //var_dump($data);
         $query = "select add_film_langue(:idfilm,:idlangue) as retour";
@@ -34,11 +53,10 @@ class Film_langueManager extends Film_langue {
             $statement->bindValue(1, $data['idfilm'], PDO::PARAM_INT);
             $statement->bindValue(2, $data['idlangue'], PDO::PARAM_INT);
             $statement->execute();
-            
+
             $retour = $statement->fetchColumn(0);
-            
+
             return $retour;
-            
         } catch (PDOException $e) {
             print "Echec de l'insertion : " . $e;
             $retour = 0;

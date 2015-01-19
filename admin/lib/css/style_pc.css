@@ -113,6 +113,7 @@
         #button_ajout{
             border:solid 1px;
             background-color:greenyellow;
+            color:black;
         }
         
         #button_ajout:hover{
@@ -192,7 +193,7 @@
         }
         
         .element_liste{
-            margin-bottom:30px;
+            height:170px;
         }
         
         #clear{
@@ -271,7 +272,16 @@
             color:red;
         }
         
+        #ajout_ok{
+            color:green;
+            font-size:1.2em;
+        }
+        
         /****************** Page fiche **************/
+        
+        #orange{
+            color:orangered;
+        }
         
         #table_fiche{
             margin-top:-24%;
@@ -299,7 +309,6 @@
         }
         
         #td_image{
-            border:solid;
             width:200px;
         }
         
@@ -347,15 +356,12 @@
             font-weight:bold;
         }
         
-        /****************** Page modification **************/
-        
-        
-        
         /****************** Aside **************/
    
         aside{
             float:right;
             margin-right:2%;
+            margin-top:-2%;
         }
         
         #activ_sup{

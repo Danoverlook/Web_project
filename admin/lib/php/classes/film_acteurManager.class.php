@@ -23,7 +23,10 @@ class Film_acteurManager extends Film_acteur {
             $_film_acteurArray[] = new Film_acteur($data);
         }
 
-        return $_film_acteurArray;
+        if (isset($_film_acteurArray))
+            return $_film_acteurArray;
+        else
+            return 0;
     }
 
     public function getFilm_acteurs($choix) {

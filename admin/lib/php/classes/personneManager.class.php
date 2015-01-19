@@ -23,23 +23,25 @@ class PersonneManager extends Personne {
             $_personneArray[] = new Personne($data);
         }
 
-        return $_personneArray;
+        if (isset($_personneArray))
+            return $_personneArray;
+        else
+            return 0;
     }
 
     public function addPersonne(array $data) {
         //var_dump($data);
         $query = "select add_personne(:nompersonne,:prenompersonne) as retour";
         try {
-            $id=null;
+            $id = null;
             $statement = $this->_db->prepare($query);
             $statement->bindValue(1, $data['nompersonne'], PDO::PARAM_STR);
             $statement->bindValue(2, $data['prenompersonne'], PDO::PARAM_STR);
             $statement->execute();
-            
+
             $retour = $statement->fetchColumn(0);
-            
+
             return $retour;
-            
         } catch (PDOException $e) {
             print "Echec de l'insertion : " . $e;
             $retour = 0;

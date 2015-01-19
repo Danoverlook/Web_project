@@ -12,7 +12,7 @@ class FilmManager extends Film {
 
     public function getListeFilm() {
         try {
-            $query = "select * from film";
+            $query = "select * from film order by titrefilm";
             $resultset = $this->_db->prepare($query);
             $resultset->execute();
         } catch (PDOException $e) {
@@ -24,6 +24,42 @@ class FilmManager extends Film {
         }
 
         return $_filmArray;
+    }
+
+    public function getListeFilmbynote() {
+        try {
+            $query = "select idfilm,titrefilm, note from (select idfilm,titrefilm,note from film order by note desc) as best_notes LIMIT 10";
+            $resultset = $this->_db->prepare($query);
+            $resultset->execute();
+        } catch (PDOException $e) {
+            print "Echec de la requ&ecirc;te " . $e->getMessage();
+        }
+
+        while ($data = $resultset->fetch()) {
+            $_filmArray[] = new Film($data);
+        }
+
+        return $_filmArray;
+    }
+
+    public function getFilmbyword($choix) {
+        try {
+            $query = "select * from film where titrefilm =:mot";
+            $resultset = $this->_db->prepare($query);
+            $resultset->bindValue(1, $choix, PDO::PARAM_STR);
+            $resultset->execute();
+        } catch (PDOException $e) {
+            print "Echec de la requ&ecirc;te " . $e->getMessage();
+        }
+
+        while ($data = $resultset->fetch()) {
+            $_filmArray[] = new Film($data);
+        }
+
+        if (isset($_filmArray))
+            return $_filmArray;
+        else
+            return 0;
     }
 
     public function getFilm($choix) {

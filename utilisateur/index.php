@@ -16,18 +16,11 @@ session_start();
     <body>
         <header>
             <img src="../admin/images/logo.png" alt="JumBox" id="logo" />
-
-            <form method="GET" action="index.php?page=page_accueil">
+            <form method="POST" action="index.php?page=page_fiche">
                 <input type="text" name="rech_titre" value="recherche par titre" id="recherche_rapide" onfocus="if (this.value == 'recherche par titre')
                             this.value = '';">
                 <button type="submit" id="button_rech_rap" name="rech_rap">rechercher</button>
             </form>
-
-            <?php
-            if (isset($_GET['rech_rap'])) {
-                $_SESSION['page'] = "page_accueil";
-            }
-            ?>
             <br/>
 
             <!--<a href="" id="recherche_avancee">> recherche avancée</a>
@@ -59,11 +52,11 @@ session_start();
                 <label>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspnote</label>
                 <input list="note" type="text" id="choix_note">
                 <datalist id="note">	
-                    <?php
-                    for ($i = 1; $i <= 20; $i++) {
-                        echo '<option value="' . $i . '">';
-                    }
-                    ?>
+            <?php
+            for ($i = 1; $i <= 20; $i++) {
+                echo '<option value="' . $i . '">';
+            }
+            ?>
                 </datalist>
                 <label>/20</label>
                 <br/>
@@ -78,40 +71,40 @@ session_start();
                 <label>durée entre&nbsp</label>
                 <input list="duree1" type="text" id="choix_duree1">
                 <datalist id="duree1">
-                    <?php
-                    for ($i = 0; $i <= 24; $i++) {
-                        echo '<option value="' . ($i * 10) . '">';
-                    }
-                    ?>
+            <?php
+            for ($i = 0; $i <= 24; $i++) {
+                echo '<option value="' . ($i * 10) . '">';
+            }
+            ?>
                 </datalist>
                 <label>min et&nbsp</label>
                 <input list="duree2" type="text" id="choix_duree2">
                 <datalist id="duree2">	
-                    <?php
-                    for ($i = 1; $i <= 30; $i++) {
-                        echo '<option value="' . ($i * 10) . '">';
-                    }
-                    ?>
+            <?php
+            for ($i = 1; $i <= 30; $i++) {
+                echo '<option value="' . ($i * 10) . '">';
+            }
+            ?>
                 </datalist>
                 <label>min</label>
                 <br/>
                 <label>année entre&nbsp</label>
                 <input list="annee1" type="text" id="choix_annee1">
                 <datalist id="annee1">
-                    <?php
-                    for ($i = 1895; $i <= 2015; $i++) {
-                        echo '<option value="' . $i . '">';
-                    }
-                    ?>
+            <?php
+            for ($i = 1895; $i <= 2015; $i++) {
+                echo '<option value="' . $i . '">';
+            }
+            ?>
                 </datalist>
                 <label>&nbspet&nbsp</label>
                 <input list="annee2" type="text" id="choix_annee2">
                 <datalist id="annee2">	
-                    <?php
-                    for ($i = 1895; $i <= 2015; $i++) {
-                        echo '<option value="' . $i . '">';
-                    }
-                    ?>
+            <?php
+            for ($i = 1895; $i <= 2015; $i++) {
+                echo '<option value="' . $i . '">';
+            }
+            ?>
                 </datalist>
             </form>
             <?php
@@ -128,10 +121,12 @@ session_start();
 
             <section id="colGauche">
                 <!--LIEN AJOUT FILM----------------------------------------------------------------------------->
-            <a href="index.php?page=page_ajout" id="button_ajout">Ajouter un film</a>
-            <br/><br/>
+                <a href="index.php?page=page_ajout" id="button_ajout">Ajouter un film</a>
+                <br/><br/>
                 <nav>
-                    <span id="select_genre">sélection d'un genre</span>
+                    <a href="index.php?page=page_accueil" id="alphabetique">Films par ordre alphabétique</a>
+                    <br/><br/>
+                    <span id="select_genre">Genres</span>
                     <?php
                     if (file_exists('./lib/php/menu.php')) {
                         include ('./lib/php/menu.php');
@@ -144,27 +139,25 @@ session_start();
 
             <aside>
                 <!--<a href="" id="activ_sup">activer la suppression</a>-->
+                <?php
+                $filmManager = new FilmManager($db);
+                $arrayfilm = $filmManager->getListeFilmbynote();
+                $nbrfilm = count($arrayfilm);
+                ?>
                 <table id="table_top">
                     <caption>Top 10</caption>
                     <tr><td></td><td></td></tr>
-                    <tr>
-                        <td>Shawshank redemption</td>
-                        <td></td>
-                        <td></td>
-                        <td>19</td>
-                    </tr>
-                    <tr>
-                        <td>Evil dead</td>
-                        <td></td>
-                        <td></td>
-                        <td>17</td>
-                    </tr>
-                    <tr>
-                        <td>Troll 2</td>
-                        <td></td>
-                        <td></td>
-                        <td>6</td>
-                    </tr>
+                    <?php for ($i = 0; $i < $nbrfilm; $i++) {
+                        ?>
+                        <tr>
+                            <td><?php echo '<a href="index.php?page=page_fiche&idfilm=' . $arrayfilm[$i]->idfilm . '">' . $arrayfilm[$i]->titrefilm . '</a>' ?></td>
+                            <td></td>
+                            <td></td>
+                            <td><?php echo $arrayfilm[$i]->note ?></td>
+                        </tr>
+                        <?php
+                    }
+                    ?>
                 </table>
                 &nbsp&nbsp&nbsp;
                 <!--<form method="POST">
@@ -192,14 +185,14 @@ session_start();
                     $_SESSION['page'] = $_GET['page'];
                 }
 
-                /*if (isset($_POST['bouton_film_clic'])) {
-                    $_SESSION['page'] = './pages/page_fiche.php';
-                    echo '3';
-                }
-                if (isset($_POST['bouton_modifier_film'])) {
-                    $_SESSION['page'] = './pages/page_modification.php';
-                    echo '4';
-                }*/
+                /* if (isset($_POST['bouton_film_clic'])) {
+                  $_SESSION['page'] = './pages/page_fiche.php';
+                  echo '3';
+                  }
+                  if (isset($_POST['bouton_modifier_film'])) {
+                  $_SESSION['page'] = './pages/page_modification.php';
+                  echo '4';
+                  } */
 
                 if (file_exists('./pages/' . $_SESSION['page'] . '.php')) {
                     include ('./pages/' . $_SESSION['page'] . '.php');

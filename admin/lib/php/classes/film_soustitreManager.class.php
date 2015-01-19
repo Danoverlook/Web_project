@@ -25,6 +25,25 @@ class Film_soustitreManager extends Film_soustitre {
 
         return $_film_soustitreArray;
     }
+    
+        public function getFilm_soustitres($choix) {
+        try {
+            $query = "select * from film_soustitre where idfilm =:idfilm";
+            $resultset = $this->_db->prepare($query);
+            $resultset->bindValue(1, $choix, PDO::PARAM_INT);
+            $resultset->execute();
+        } catch (PDOException $e) {
+            print "Echec de la requ&ecirc;te " . $e->getMessage();
+        }
+
+        while ($data = $resultset->fetch()) {
+            $_film_soustitreArray[] = new Film_soustitre($data);
+        }
+        if (isset($_film_soustitreArray))
+            return $_film_soustitreArray;
+        else
+            return 0;
+    }
 
     public function addFilm_soustitre(array $data) {
         //var_dump($data);

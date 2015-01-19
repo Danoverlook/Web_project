@@ -23,7 +23,10 @@ class Film_realisateurManager extends Film_realisateur {
             $_film_realisateurArray[] = new Film_realisateur($data);
         }
 
-        return $_film_realisateurArray;
+        if (isset($_film_realisateurArray))
+            return $_film_realisateurArray;
+        else
+            return 0;
     }
 
     public function getFilm_realisateurs($choix) {
@@ -39,8 +42,8 @@ class Film_realisateurManager extends Film_realisateur {
         while ($data = $resultset->fetch()) {
             $_film_realisateurArray[] = new Film_realisateur($data);
         }
-        if (isset($_film_acteurArray))
-            return $_film_acteurArray;
+        if (isset($_film_realisateurArray))
+            return $_film_realisateurArray;
         else
             return 0;
     }
