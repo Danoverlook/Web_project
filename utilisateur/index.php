@@ -22,7 +22,6 @@ session_start();
                 <button type="submit" id="button_rech_rap" name="rech_rap">rechercher</button>
             </form>
             <br/>
-
             <!--<a href="" id="recherche_avancee">> recherche avancée</a>
 
             <form method="POST" id="form_rech_avancee">
@@ -120,9 +119,6 @@ session_start();
             <!--COLONNE DE GAUCHE------------------------------------------------------------------------------------------>
 
             <section id="colGauche">
-                <!--LIEN AJOUT FILM----------------------------------------------------------------------------->
-                <a href="index.php?page=page_ajout" id="button_ajout">Ajouter un film</a>
-                <br/><br/>
                 <nav>
                     <a href="index.php?page=page_accueil" id="alphabetique">Films par ordre alphabétique</a>
                     <br/><br/>
@@ -169,6 +165,8 @@ session_start();
                     $_SESSION['page'] = "page_statistiques";
                 }
                 ?>
+                <br/>
+                <a href="../admin/index.php" id="connexion">Connexion</a>
             </aside>
 
             <!--CONTENU------------------------------------------------------------------------------------------>

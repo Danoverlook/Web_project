@@ -26,7 +26,7 @@ $arrayfilm_acteur = $film_acteurManager->getListeFilm_acteur();
 $nbrfilm_acteur = count($arrayfilm_acteur);
 
 if (!isset($_GET['idgenre'])) {
-    echo '<h4>Liste des films par ordre alphabétique</h4>';
+    echo '<h4>Liste des films par ordre alphabétique</h4><br/><br/><br/>';
     for ($i = 0; $i < $nbrfilm; $i++) {
         ?>
         <article class="element_liste">    
@@ -115,7 +115,7 @@ if (!isset($_GET['idgenre'])) {
         <?php
     }
 } else {
-    echo '<h4>Liste des films du genre ' . $_GET['nomgenre'] . '</h4>';
+    echo '<h4>Liste des films du genre ' . $_GET['nomgenre'] . '</h4><br/><br/><br/>';
     for ($i = 0; $i < $nbrfilm_genre; $i++) { //pour tous les films/genres
         if ($arrayfilm_genre[$i]->idgenre == $_GET['idgenre']) { //si l'id du genre = à celui demandé
             for ($j = 0; $j < $nbrfilm; $j++) {

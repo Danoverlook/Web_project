@@ -2,408 +2,446 @@
 
 /****************** Layout ***************/
 
+.login_form{
+    margin:0 auto;
+    margin-top:20px;
+    padding-top:10px;
+    width:90%; 
+    max-width:900px;
+    min-width: 760px;
+    height:100px;
+    color:black;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+}
 
-        /****************** Header **************/
-        header {
-            margin:0 auto;
-            width:90%; 
-            max-width:900px;
-            min-width: 760px;
-            height:145px;
-            background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#7d7e7d), color-stop(100%,#0e0e0e)); /* Chrome,Safari4+ */
-            color:white;
-            border-top-left-radius: 7px;
-            border-top-right-radius: 7px;
-        }
-        
-        #logo{
-            float:left;
-            padding-left:1%;
-            padding-top:1%;
-            border-radius:8px;
-        }
-        
-        #recherche_rapide{
-            display:inline-block;
-            margin-left:1%;
-            margin-top: 3%;
-            margin-bottom:1%;
-            border-top-left-radius:5px;
-            border-bottom-left-radius:5px;
-        }
-        
-        #button_rech_rap{
-            border-top-right-radius:3px;
-            border-bottom-right-radius:3px;
-        }
-        
-        #recherche_avancee{
-            margin-left:1%;
-            color:white;
-            text-decoration:none;
-        }
-        
-        #recherche_avancee:hover{
-            text-decoration:underline;
-        }
-        
-        #recherche_avancee:focus{
-            color:greenyellow
-        }
-        
-        #form_rech_avancee{
-            width:57%;
-            margin-left:42%;
-            margin-top:-78px;
-        }
-        #choix_genre1,#choix_genre2{
-            display:inline-block;
-            border-radius:5px;
-        }
-        
-        #choix_acteur,#choix_realisateur{
-            margin-top:1%;
-            display:inline-block;
-            border-radius:5px;
-        }
-        
-        #choix_duree1,#choix_duree2{
-            width:8%;
-            margin-top:1%;
-            display:inline-block;
-            border-radius:5px;
-        }
-        
-        #choix_annee1,#choix_annee2{
-            width:10%;
-            margin-top:1%;
-            display:inline-block;
-            border-radius:5px;
-        }
-        
-        #choix_note{
-            width:7%;
-            display:inline-block;
-            border-radius:5px;
-        }
-        
-        #button_rech_av{
-            display:block;
-            float:right;
-            margin-right:28.5%;
-            margin-top:1%;
-            width:6%;
-            height:6%;
-            border-radius:5px;
-        }
+#message{
+    color:red;
+    text-align:center;
+}
 
-        /****************** Page **************/
-        #page {
-             margin:0 auto;
-             width:90%; 
-             max-width:900px;
-             min-width:760px;
-             height:1100px;
-             margin-top:0.5%;
-             background-color: rgb(188,197,205);
-             border-radius:7px;
-        }
-        
-        /****************** colGauche **************/
-        #button_ajout{
-            border:solid 1px;
-            background-color:greenyellow;
-            color:black;
-        }
-        
-        #button_ajout:hover{
-            color:black;
-        }
-        
-        #colGauche{
-            float:left;
-            margin-top:3%;
-            margin-left:2%;
-            width:15%;
-        }
-        
-        #select_genre{
-            margin-left:4%;
-            display:inline-block;
-            text-decoration:underline;
-        }
-        
-        .button_genre{
-            background-color:rgb(188,197,205);
-            border:none;
-            font-weight:bold;
-        }
-        
-        .button_genre:hover{
-            color:white;
-        }
-        
-        a{
-            text-decoration:none;
-        }
-        
-        a{
-            color:black;
-        }
-        
-        a:hover{
-            color:white;
-        }
-        
-        a:focus{
-            color:greenyellow
-        }
-        
-        /****************** supprimer la sélection **************/
-        
-        #sup_selection{
-            margin-left:5%;
-        }
-        
-        /****************** Contenu **************/
-        
-        #contenu{
-            float:left;
-            width:52%;
-            margin-top:1%;
-            padding-left:5%;
-        }
-        
-        /****************** Page accueil ********/
+/****************** Header **************/
+header {
+    margin:0 auto;
+    width:90%; 
+    max-width:900px;
+    min-width: 760px;
+    height:145px;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#7d7e7d), color-stop(100%,#0e0e0e)); /* Chrome,Safari4+ */
+    color:white;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+}
 
-        .link_fiche{
-            clear:both;
-            display:inline-block;
-            float:left;
-            width:20%;
-        }
-        
-        .img_liste{
-           width:100%;
-        }
-        
-        .table_contenu{
-            color:black;
-            font-size:0.9em;
-        }
-        
-        .element_liste{
-            height:170px;
-        }
-        
-        #clear{
-            clear:both;
-        }
-        
-        #titre_film{
-            color:firebrick;
-            font-weight:bold;
-            padding-left:0;
-        }
-        
-        #titre_film:hover{
-            color:white;
-        }
-        
-        .td_bold{
-            color:darkslategrey;
-            font-weight:bold;
-            vertical-align: top;
-        }
-        
-        /****************** Page ajout ********/
-        
-        #form_ajout{
-            border:solid 1px;
-            border-radius:6px;
-            padding-left:0.5%;
-            padding-bottom:1%;
-        }
-        
-        #titre_film_ajout{
-            color:firebrick;
-            font-weight:bold;
-        }
-        
-        .td_ajout{
-            padding-bottom:1%;
-            color:darkslategrey;
-            font-weight:bold;
-        }
-        
-        #text_annee{
-            width:10%;
-        }
-        
-        #text_duree{
-            width:7%;
-        }
-        
-        #text_note{
-            width:5%;
-        }
-        
-        #list_definition{
-            width:18%;
-        }
-        
-        #label_textarea{
-            vertical-align:top;
-        }
-        
-        textarea{
-            resize: none;
-        }
-        
-        #text_size{
-            width:35%;
-        }
-        
-        #button_ajouter{
-            background-color:greenyellow;
-        }
-        
-        .oblige{
-            color:red;
-        }
-        
-        #ajout_ok{
-            color:green;
-            font-size:1.2em;
-        }
-        
-        /****************** Page fiche **************/
-        
-        #orange{
-            color:orangered;
-        }
-        
-        #table_fiche{
-            margin-top:-24%;
-            border-left:2px solid;
-            border-right:2px solid;
-            border-bottom:2px solid;
-            border-bottom-left-radius:5px;  
-            border-bottom-right-radius:5px;
-            font-size:1em;
-            background-color:rgb(112,146,190);
-        }
-        
-        #caption_fiche{
-            background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#7d7e7d), color-stop(100%,#0e0e0e)); /* Chrome,Safari4+ */
-            font-size:2em;
-            color:peru;
-            border-color:black;
-            text-align:left;
-            padding-left:5%;
-        }
-        
-        #caption_span_annee{
-            font-size:0.7em;
-            color:royalblue;
-        }
-        
-        #td_image{
-            width:200px;
-        }
-        
-        #td_image img{
-            width:100%
-        }
-        
-        #td_droite_img{
-            padding:3%;
-            vertical-align:top;
-            font-size:1em;
-        }
-        
-        .span_bold{
-            font-weight:bold;
-            color:darkred;
-        }
-        
-        #span_note{
-            font-weight:bold;
-            color:rgb(255,212,5);
-        }
-        
-        #td_resume{
-            padding-left:1%;
-        }
-        
-        #td_bouton_modif{
-            border-right:solid 1px;
-            text-align:right;
-        }
-        
-        #button_modifier{
-            border:none;
-            font-weight:bold;
-            background-color:rgb(112,146,190);
-        }
-        
-        #button_modifier:hover{
-            color:white;
-        }
-        
-        #fiche_sup_film{
-            text-decoration:none;
-            font-weight:bold;
-        }
-        
-        /****************** Aside **************/
-   
-        aside{
-            float:right;
-            margin-right:2%;
-            margin-top:-2%;
-        }
-        
-        #activ_sup{
-            display:block;
-            text-align:right;
-        }
-        
-        caption{
-            margin-top:25%;
-            font-weight:bold;
-            background-color:rgb(255,212,5);
-            border-left:solid 2px;
-            border-right:solid 2px;
-            border-top:solid 2px;
-            border-top-left-radius:5px;
-            border-top-right-radius:5px;
-        }
-        
-        #table_top{
-            background-color:rgb(112,146,190);
-            border-bottom:solid 2px;
-            border-left:solid 2px;
-            border-right:solid 2px;
-            border-bottom-left-radius:5px;
-            border-bottom-right-radius:5px;
-        }
-        
-        .button_lien{
-            background-color: rgb(188,197,205);
-            border:none;
-            text-decoration:underline;
-        }
-        
-        .button_lien:hover{
-           color:white;
-        }
-        
-        /****************** Footer **************/
-        
-        footer{
-            clear:both;
-            margin:0 auto;
-            text-align:center;
-        }
-        
+#logo{
+    float:left;
+    padding-left:1%;
+    padding-top:1%;
+    border-radius:8px;
+}
+
+#recherche_rapide{
+    display:inline-block;
+    margin-left:1%;
+    margin-top: 3%;
+    margin-bottom:1%;
+    border-top-left-radius:5px;
+    border-bottom-left-radius:5px;
+}
+
+#button_rech_rap{
+    border-top-right-radius:3px;
+    border-bottom-right-radius:3px;
+}
+
+#recherche_avancee{
+    margin-left:1%;
+    color:white;
+    text-decoration:none;
+}
+
+#recherche_avancee:hover{
+    text-decoration:underline;
+}
+
+#recherche_avancee:focus{
+    color:greenyellow
+}
+
+#form_rech_avancee{
+    width:57%;
+    margin-left:42%;
+    margin-top:-78px;
+}
+#choix_genre1,#choix_genre2{
+    display:inline-block;
+    border-radius:5px;
+}
+
+#choix_acteur,#choix_realisateur{
+    margin-top:1%;
+    display:inline-block;
+    border-radius:5px;
+}
+
+#choix_duree1,#choix_duree2{
+    width:8%;
+    margin-top:1%;
+    display:inline-block;
+    border-radius:5px;
+}
+
+#choix_annee1,#choix_annee2{
+    width:10%;
+    margin-top:1%;
+    display:inline-block;
+    border-radius:5px;
+}
+
+#choix_note{
+    width:7%;
+    display:inline-block;
+    border-radius:5px;
+}
+
+#button_rech_av{
+    display:block;
+    float:right;
+    margin-right:28.5%;
+    margin-top:1%;
+    width:6%;
+    height:6%;
+    border-radius:5px;
+}
+
+/****************** Page **************/
+#page {
+    margin:0 auto;
+    width:90%; 
+    max-width:900px;
+    min-width:760px;
+    height:1100px;
+    margin-top:0.5%;
+    background-color: rgb(188,197,205);
+    border-radius:7px;
+}
+
+/****************** colGauche **************/
+#button_ajout{
+    border:solid 1px;
+    background-color:greenyellow;
+    color:black;
+}
+
+#button_ajout:hover{
+    color:black;
+}
+
+#colGauche{
+    float:left;
+    margin-top:3%;
+    margin-left:2%;
+    width:15%;
+}
+
+#select_genre{
+    margin-left:4%;
+    display:inline-block;
+    text-decoration:underline;
+}
+
+.button_genre{
+    background-color:rgb(188,197,205);
+    border:none;
+    font-weight:bold;
+}
+
+.button_genre:hover{
+    color:white;
+}
+
+a{
+    text-decoration:none;
+}
+
+a{
+    color:black;
+}
+
+a:hover{
+    color:white;
+}
+
+a:focus{
+    color:greenyellow
+}
+
+/****************** supprimer la sélection **************/
+
+#sup_selection{
+    margin-left:5%;
+}
+
+/****************** Contenu **************/
+
+#contenu{
+    float:left;
+    width:52%;
+    margin-top:1%;
+    padding-left:5%;
+}
+
+/****************** Page accueil ********/
+
+#title{
+    height:50px;
+    width:100%;
+}
+
+h4{
+    display:inline;
+}
+
+#img_pdf{
+    display:block;
+    margin-left:94%;
+    margin-top:-22px;
+}
+
+.link_fiche{
+    clear:both;
+    display:inline-block;
+    float:left;
+    width:20%;
+}
+
+.img_liste{
+    width:100%;
+}
+
+.table_contenu{
+    color:black;
+    font-size:0.9em;
+}
+
+.element_liste{
+    height:170px;
+}
+
+#clear{
+    clear:both;
+}
+
+#titre_film{
+    color:firebrick;
+    font-weight:bold;
+    padding-left:0;
+}
+
+#titre_film:hover{
+    color:white;
+}
+
+.td_bold{
+    color:darkslategrey;
+    font-weight:bold;
+    vertical-align: top;
+}
+
+/****************** Page ajout ********/
+
+#form_ajout{
+    border:solid 1px;
+    border-radius:6px;
+    padding-left:0.5%;
+    padding-bottom:1%;
+}
+
+#titre_film_ajout{
+    color:firebrick;
+    font-weight:bold;
+}
+
+.td_ajout{
+    padding-bottom:1%;
+    color:darkslategrey;
+    font-weight:bold;
+}
+
+#text_annee{
+    width:10%;
+}
+
+#text_duree{
+    width:7%;
+}
+
+#text_note{
+    width:5%;
+}
+
+#list_definition{
+    width:18%;
+}
+
+#label_textarea{
+    vertical-align:top;
+}
+
+textarea{
+    resize: none;
+}
+
+#text_size{
+    width:35%;
+}
+
+#button_ajouter{
+    background-color:greenyellow;
+}
+
+.oblige{
+    color:red;
+}
+
+#ajout_ok{
+    color:green;
+    font-size:1.2em;
+}
+
+/****************** Page fiche **************/
+
+#orange{
+    color:orangered;
+}
+
+#table_fiche{
+    margin-top:-24%;
+    border-left:2px solid;
+    border-right:2px solid;
+    border-bottom:2px solid;
+    border-bottom-left-radius:5px;  
+    border-bottom-right-radius:5px;
+    font-size:1em;
+    background-color:rgb(112,146,190);
+}
+
+#caption_fiche{
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#7d7e7d), color-stop(100%,#0e0e0e)); /* Chrome,Safari4+ */
+    font-size:2em;
+    color:peru;
+    border-color:black;
+    text-align:left;
+    padding-left:5%;
+}
+
+#caption_span_annee{
+    font-size:0.7em;
+    color:royalblue;
+}
+
+#td_image{
+    width:200px;
+}
+
+#td_image img{
+    width:100%
+}
+
+#td_droite_img{
+    padding:3%;
+    vertical-align:top;
+    font-size:1em;
+}
+
+.span_bold{
+    font-weight:bold;
+    color:darkred;
+}
+
+#span_note{
+    font-weight:bold;
+    color:rgb(255,212,5);
+}
+
+#td_resume{
+    padding-left:1%;
+}
+
+#td_bouton_modif{
+    border-right:solid 1px;
+    text-align:right;
+}
+
+#button_modifier{
+    border:none;
+    font-weight:bold;
+    background-color:rgb(112,146,190);
+}
+
+#button_modifier:hover{
+    color:white;
+}
+
+#fiche_sup_film{
+    text-decoration:none;
+    font-weight:bold;
+}
+
+/****************** Aside **************/
+
+aside{
+    float:right;
+    margin-right:2%;
+    margin-top:-2%;
+}
+
+#activ_sup{
+    display:block;
+    text-align:right;
+}
+
+caption{
+    margin-top:25%;
+    font-weight:bold;
+    background-color:rgb(255,212,5);
+    border-left:solid 2px;
+    border-right:solid 2px;
+    border-top:solid 2px;
+    border-top-left-radius:5px;
+    border-top-right-radius:5px;
+}
+
+#table_top{
+    background-color:rgb(112,146,190);
+    border-bottom:solid 2px;
+    border-left:solid 2px;
+    border-right:solid 2px;
+    border-bottom-left-radius:5px;
+    border-bottom-right-radius:5px;
+}
+
+.button_lien{
+    background-color: rgb(188,197,205);
+    border:none;
+    text-decoration:underline;
+}
+
+.button_lien:hover{
+    color:white;
+}
+
+#connexion{
+    display:block;
+    color:darkblue;
+    font-weight:bold;
+    float:right;
+}
+
+/****************** Footer **************/
+
+footer{
+    clear:both;
+    margin:0 auto;
+    text-align:center;
+}
